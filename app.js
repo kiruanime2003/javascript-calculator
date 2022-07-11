@@ -52,6 +52,9 @@ document.addEventListener("DOMContentLoaded", function(){
                 case "/":
                     computedResult = p/n;
                     break;
+                case "%":
+                    computedResult = p%n;
+                    break;
                 default:
                     return 0;
             }

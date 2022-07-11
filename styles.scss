@@ -1,0 +1,99 @@
+$lightCyan: #E0FBFC;
+$blueSapphire: #006E90;
+$powderBlue: #C2DFE3;
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $lightCyan;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    border: 2px $blueSapphire solid;
+    border-radius: 1%;
+    padding: 3px;
+
+    #result-box{
+        text-align: right;
+        padding: 15px 17px;
+        border-bottom: 2px $blueSapphire solid;
+        color: $blueSapphire;
+
+        #prev-operand{
+            font-size: 21px;
+            font-weight: 400;
+            margin: 10px 0;
+            overflow:scroll;
+        }
+
+        #next-operand{
+            font-size: 30px;
+            font-weight: 700;
+            overflow:scroll;
+        }
+    }
+
+    #numbers-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        margin: 3px 0;
+
+        .element{
+            border: 2px $blueSapphire solid;
+            border-radius: 3%;
+            padding: 11px 7px;
+            margin: 1px;
+            text-align: center;
+            background-color: $powderBlue;
+            color: $blueSapphire;
+            font-weight: 400;
+            font-size: 17px;
+        }
+
+        .element:active{
+            background-color: $lightCyan;
+        }
+
+        .element:hover{
+            cursor: pointer;
+        }
+        
+        #clear{
+            grid-column: 2 / 4;
+        }
+
+        #equal{
+            background-color: $blueSapphire;
+            color: $powderBlue;
+        }
+
+        #equal:active, #delete:active, #clear:active{
+            background-color: $powderBlue;
+            color: $blueSapphire;
+        }
+
+        #delete, #clear{
+            background-color: $lightCyan;
+        }
+    }
+}
+
+@media screen and (max-width: 380px){
+    #box{
+        width: 290px;
+
+        #equal{
+            grid-column: 2/4;
+        }
+    }
+}

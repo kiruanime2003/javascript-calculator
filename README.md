@@ -5,6 +5,6 @@
 ## How to use
 - Click on the delete button to delete the last character in the input
 - Click on the clear button to clear the entire input
-- Click [here]() for live preview
+- Click [here](https://kiruanime2003.github.io/javascript-calculator/) for live preview
 
 Author - [Kiruthiga K](https://kiruanime2003.gitlab.io/)
